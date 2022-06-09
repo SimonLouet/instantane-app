@@ -31,6 +31,7 @@ export default defineComponent({
       login() {
         this.$auth0.loginWithRedirect();
       },
+      
       async doSomethingWithToken() {
         const token = await this.$auth0.getAccessTokenSilently();
         const response = await fetch('https://xn--instantan-cs-jeb.com/api/authors', {
